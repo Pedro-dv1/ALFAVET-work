@@ -177,28 +177,44 @@ function toggleOutroInput() {
     }
 }
 
-const backToTopButton = document.getElementById('backToTop');
-
- baseado na posição de scroll
-function toggleBackToTop() {
-    if (window.scrollY > 300) {
-        backToTopButton.classList.add('show');
-    } else {
-        backToTopButton.classList.remove('show');
+// Botão "Voltar ao Topo" - Versão corrigida
+document.addEventListener('DOMContentLoaded', function() {
+    const backToTopButton = document.getElementById('backToTop');
+    
+    if (!backToTopButton) {
+        console.error('Botão backToTop não encontrado!');
+        return;
     }
-}
 
-function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-}
+    console.log('Botão backToTop encontrado, script funcionando...');
 
-window.addEventListener('scroll', toggleBackToTop);
-backToTopButton.addEventListener('click', function(e) {
-    e.preventDefault();
-    scrollToTop();
+    // Função para mostrar/ocultar o botão
+    function toggleBackToTop() {
+        console.log('Scroll Y:', window.scrollY);
+        
+        if (window.scrollY > 300) {
+            backToTopButton.classList.add('show');
+            console.log('Botão MOSTRADO');
+        } else {
+            backToTopButton.classList.remove('show');
+            console.log('Botão OCULTADO');
+        }
+    }
+
+    // Função para voltar ao topo suavemente
+    function scrollToTop(e) {
+        if (e) e.preventDefault();
+        
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
+    // Event Listeners
+    window.addEventListener('scroll', toggleBackToTop);
+    backToTopButton.addEventListener('click', scrollToTop);
+
+    // Verificar posição inicial
+    toggleBackToTop();
 });
-
-document.addEventListener('DOMContentLoaded', toggleBackToTop);
