@@ -177,7 +177,6 @@ function toggleOutroInput() {
     }
 }
 
-// Versão alternativa mais simples
 function initBackToTop() {
     const backToTopBtn = document.getElementById('backToTop');
     
@@ -199,7 +198,6 @@ function initBackToTop() {
     });
 }
 
-// Inicializar quando o DOM estiver pronto
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initBackToTop);
 } else {
