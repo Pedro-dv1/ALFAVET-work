@@ -176,3 +176,29 @@ function toggleOutroInput() {
         document.getElementById('outroEspecie').value = '';
     }
 }
+
+const backToTopButton = document.getElementById('backToTop');
+
+ baseado na posição de scroll
+function toggleBackToTop() {
+    if (window.scrollY > 300) {
+        backToTopButton.classList.add('show');
+    } else {
+        backToTopButton.classList.remove('show');
+    }
+}
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+window.addEventListener('scroll', toggleBackToTop);
+backToTopButton.addEventListener('click', function(e) {
+    e.preventDefault();
+    scrollToTop();
+});
+
+document.addEventListener('DOMContentLoaded', toggleBackToTop);
