@@ -177,44 +177,31 @@ function toggleOutroInput() {
     }
 }
 
-// Botão "Voltar ao Topo" - Versão corrigida
-document.addEventListener('DOMContentLoaded', function() {
-    const backToTopButton = document.getElementById('backToTop');
+// Versão alternativa mais simples
+function initBackToTop() {
+    const backToTopBtn = document.getElementById('backToTop');
     
-    if (!backToTopButton) {
-        console.error('Botão backToTop não encontrado!');
-        return;
-    }
-
-    console.log('Botão backToTop encontrado, script funcionando...');
-
-    // Função para mostrar/ocultar o botão
-    function toggleBackToTop() {
-        console.log('Scroll Y:', window.scrollY);
-        
-        if (window.scrollY > 300) {
-            backToTopButton.classList.add('show');
-            console.log('Botão MOSTRADO');
+    if (!backToTopBtn) return;
+    
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.style.opacity = '1';
+            backToTopBtn.style.visibility = 'visible';
         } else {
-            backToTopButton.classList.remove('show');
-            console.log('Botão OCULTADO');
+            backToTopBtn.style.opacity = '0';
+            backToTopBtn.style.visibility = 'hidden';
         }
-    }
+    });
+    
+    backToTopBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
 
-    // Função para voltar ao topo suavemente
-    function scrollToTop(e) {
-        if (e) e.preventDefault();
-        
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    }
-
-    // Event Listeners
-    window.addEventListener('scroll', toggleBackToTop);
-    backToTopButton.addEventListener('click', scrollToTop);
-
-    // Verificar posição inicial
-    toggleBackToTop();
-});
+// Inicializar quando o DOM estiver pronto
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initBackToTop);
+} else {
+    initBackToTop();
+}
