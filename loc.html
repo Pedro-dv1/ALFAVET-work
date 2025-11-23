@@ -13,23 +13,21 @@
 </head>
 
 <body>
-  <!-- WhatsApp Button -->
   <a id="whatsapp-btn" href="#" class="floating-btn whatsapp-btn" target="_blank">
     <img src="styles/img/icon/wa-icon2.png" alt="WhatsApp">
   </a>
-<!-- Início: botão VLibras -->
-<div vw class="enabled">
-  <div vw-access-button class="active"></div>
-  <div vw-plugin-wrapper>
-    <div class="vw-plugin-top-wrapper"></div>
-  </div>
-</div>
 
-<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-<script>
-  new window.VLibras.Widget('https://vlibras.gov.br/app');
-</script>
-<!-- Fim: botão VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
 
   <header>
     <div class="altnav">
@@ -92,7 +90,6 @@
     </nav>
   </header>
 
-
   <main>
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -132,7 +129,6 @@
       </div>
     </div>
 
-    <!-- Barra de pesquisa -->
     <div class="container py-4 mt-3">
       <div class="row">
         <div class="col-2">
@@ -146,7 +142,6 @@
               <option value="fernandopolis">Fernandópolis</option>
             </select>
           </div>
-
         </div>
         <div class="col-10">
           <form class="d-flex" role="search" aria-label="Pesquisar no site" onsubmit="return false;">
@@ -170,12 +165,11 @@
     <div id="no-results" class="text-center d-none mt-4">
       Nenhum resultado encontrado para <strong><span id="search-term"></span></strong>.
     </div>
-    
+
     <section id="card-city">
       <div class="container-fluid mt-5 mb-5">
         <div class="container">
           <div id="cardsContainer" class="row">
-            <!-- Jales -->
             <div class="card card-custom card-city col-md-4" data-city="jales">
               <div class="card-body card-body-custom">
                 <div class="badges-container">
@@ -199,11 +193,11 @@
                     <i class="bi bi-star-fill rating me-2"></i>
                     <span>5. Excelente (4)</span>
                   </div>
-                  <button class="btn btn-contato">Contato</button>
+                  <button class="btn btn-contato" onclick="agendarConsulta('Turma dos bichos', 'Jales', 'loteamento Avenida, Jales')">Contato</button>
                 </div>
               </div>
             </div>
-            <!---->
+
             <div class="card card-custom card-city col-md-4" data-city="jales">
               <div class="card-body card-body-custom">
                 <div class="content-wrapper">
@@ -223,11 +217,11 @@
                     <i class="bi bi-star-fill rating me-2"></i>
                     <span>5. Excelente (1)</span>
                   </div>
-                  <button class="btn btn-contato">Contato</button>
+                  <button class="btn btn-contato" onclick="agendarConsulta('Mundo Pet, Clínica Veterinária', 'Jales', 'Centro, Jales')">Contato</button>
                 </div>
               </div>
             </div>
-            <!---->
+
             <div class="card card-custom card-city col-md-4" data-city="jales">
               <div class="card-body card-body-custom">
                 <div class="content-wrapper">
@@ -247,11 +241,11 @@
                     <i class="bi bi-star-fill rating me-2"></i>
                     <span>4,7. Excelente (8)</span>
                   </div>
-                  <button class="btn btn-contato">Contato</button>
+                  <button class="btn btn-contato" onclick="agendarConsulta('SERV VET Clínica Animal', 'Jales', 'Vila Ines, Jales')">Contato</button>
                 </div>
               </div>
             </div>
-            <!---->
+
             <div class="card card-custom card-city col-md-4" data-city="jales">
               <div class="card-body card-body-custom">
                 <div class="badges-container">
@@ -275,11 +269,11 @@
                     <i class="bi bi-star-fill rating me-2"></i>
                     <span>5. Excelente (6)</span>
                   </div>
-                  <button class="btn btn-contato">Contato</button>
+                  <button class="btn btn-contato" onclick="agendarConsulta('Cliníca Veterinária Bicho Mimado', 'Jales', 'Centro, Jales')">Contato</button>
                 </div>
               </div>
             </div>
-            <!---->
+
             <div class="card card-custom card-city col-md-4" data-city="jales">
               <div class="card-body card-body-custom">
                 <div class="content-wrapper">
@@ -299,11 +293,11 @@
                     <i class="bi bi-star-fill rating me-2"></i>
                     <span>4,5. Excelente (3)</span>
                   </div>
-                  <button class="btn btn-contato">Contato</button>
+                  <button class="btn btn-contato" onclick="agendarConsulta('JC Carnes', 'Jales', 'Jardim Estados Unidos, Jales')">Contato</button>
                 </div>
               </div>
             </div>
-            <!---->
+
             <div class="card card-custom card-city col-md-4" data-city="jales">
               <div class="card-body card-body-custom">
                 <div class="badges-container">
@@ -327,12 +321,10 @@
                     <i class="bi bi-star-fill rating me-2"></i>
                     <span>4,8. Excelente (54)</span>
                   </div>
-                  <button class="btn btn-contato">Contato</button>
+                  <button class="btn btn-contato" onclick="agendarConsulta('PUPIM Cliníca Veterinária', 'Jales', 'Centro, Jales')">Contato</button>
                 </div>
               </div>
             </div>
-
-            <!-- Santa Fé -->
 
             <div class="card card-custom card-city col-md-4" data-city="santaFe">
               <div class="card-body card-body-custom">
@@ -357,11 +349,11 @@
                     <i class="bi bi-star-fill rating me-2"></i>
                     <span>5. Excelente (2)</span>
                   </div>
-                  <button class="btn btn-contato">Contato</button>
+                  <button class="btn btn-contato" onclick="agendarConsulta('Vet Care', 'Santa Fé', 'Av.Navarro de Andrade, Santa Fé')">Contato</button>
                 </div>
               </div>
             </div>
-            <!---->
+
             <div class="card card-custom card-city col-md-4" data-city="santaFe">
               <div class="card-body card-body-custom">
                 <div class="content-wrapper">
@@ -381,11 +373,11 @@
                     <i class="bi bi-star-fill rating me-2"></i>
                     <span>4,3. Excelente (4)</span>
                   </div>
-                  <button class="btn btn-contato">Contato</button>
+                  <button class="btn btn-contato" onclick="agendarConsulta('Espaço Vet', 'Santa Fé', 'Av. Conselheiro Antônio Prado, Santa Fé')">Contato</button>
                 </div>
               </div>
             </div>
-            <!---->
+
             <div class="card card-custom card-city col-md-4" data-city="santaFe">
               <div class="card-body card-body-custom">
                 <div class="badges-container">
@@ -395,8 +387,7 @@
                 <div class="content-wrapper">
                   <div class="text-content">
                     <div class="clinica-text">Clínica</div>
-                    <div class="turma-text">Cliníca Veterinária Dra. Lauana Cruz
-                    </div>
+                    <div class="turma-text">Cliníca Veterinária Dra. Lauana Cruz</div>
                     <div class="local-text">Jardim Universitário III, Santa Fé</div>
                   </div>
                   <div class="icon-container">
@@ -410,12 +401,11 @@
                     <i class="bi bi-star-fill rating me-2"></i>
                     <span>5. Excelente (14)</span>
                   </div>
-                  <button class="btn btn-contato">Contato</button>
+                  <button class="btn btn-contato" onclick="agendarConsulta('Cliníca Veterinária Dra. Lauana Cruz', 'Santa Fé', 'Jardim Universitário III, Santa Fé')">Contato</button>
                 </div>
               </div>
             </div>
 
-            <!-- Votuporanga -->
             <div class="card card-custom card-city col-md-4" data-city="votuporanga">
               <div class="card-body card-body-custom">
                 <div class="badges-container">
@@ -439,11 +429,11 @@
                     <i class="bi bi-star-fill rating me-2"></i>
                     <span>4,9. Excelente (219)</span>
                   </div>
-                  <button class="btn btn-contato">Contato</button>
+                  <button class="btn btn-contato" onclick="agendarConsulta('Cliníca Veterinária Vida Animal', 'Votuporanga', 'Vila Marim, Votuporanga')">Contato</button>
                 </div>
               </div>
             </div>
-            <!---->
+
             <div class="card card-custom card-city col-md-4" data-city="votuporanga">
               <div class="card-body card-body-custom">
                 <div class="content-wrapper">
@@ -463,11 +453,11 @@
                     <i class="bi bi-star-fill rating me-2"></i>
                     <span>4,5. Excelente (72)</span>
                   </div>
-                  <button class="btn btn-contato">Contato</button>
+                  <button class="btn btn-contato" onclick="agendarConsulta('Cliníca Veterinária Menechelli', 'Votuporanga', 'Santa Eliza, Votuporanga')">Contato</button>
                 </div>
               </div>
             </div>
-            <!---->
+
             <div class="card card-custom card-city col-md-4" data-city="votuporanga">
               <div class="card-body card-body-custom">
                 <div class="badges-container">
@@ -491,11 +481,11 @@
                     <i class="bi bi-star-fill rating me-2"></i>
                     <span>4,9. Excelente (57)</span>
                   </div>
-                  <button class="btn btn-contato">Contato</button>
+                  <button class="btn btn-contato" onclick="agendarConsulta('Cliníca Veterinária Manas Pet', 'Votuporanga', 'Vila Marim, Votuporanga')">Contato</button>
                 </div>
               </div>
             </div>
-            <!---->
+
             <div class="card card-custom card-city col-md-4" data-city="votuporanga">
               <div class="card-body card-body-custom">
                 <div class="content-wrapper">
@@ -515,11 +505,11 @@
                     <i class="bi bi-star-fill rating me-2"></i>
                     <span>4,6. Excelente (19)</span>
                   </div>
-                  <button class="btn btn-contato">Contato</button>
+                  <button class="btn btn-contato" onclick="agendarConsulta('Animal Center', 'Votuporanga', 'Vila Horta, Votuporanga')">Contato</button>
                 </div>
               </div>
             </div>
-            <!---->
+
             <div class="card card-custom card-city col-md-4" data-city="votuporanga">
               <div class="card-body card-body-custom">
                 <div class="content-wrapper">
@@ -539,11 +529,11 @@
                     <i class="bi bi-star-fill rating me-2"></i>
                     <span>4,7. Excelente (182)</span>
                   </div>
-                  <button class="btn btn-contato">Contato</button>
+                  <button class="btn btn-contato" onclick="agendarConsulta('Galera do Bichos', 'Votuporanga', 'Chácaras das Paineiras, Votuporanga')">Contato</button>
                 </div>
               </div>
             </div>
-            <!---->
+
             <div class="card card-custom card-city col-md-4" data-city="votuporanga">
               <div class="card-body card-body-custom">
                 <div class="badges-container">
@@ -567,12 +557,11 @@
                     <i class="bi bi-star-fill rating me-2"></i>
                     <span>5. Excelente (6)</span>
                   </div>
-                  <button class="btn btn-contato">Contato</button>
+                  <button class="btn btn-contato" onclick="agendarConsulta('Cliníca Veterinária Marques', 'Votuporanga', 'Santa Luzia, Votuporanga')">Contato</button>
                 </div>
               </div>
             </div>
 
-            <!-- Fernandópolis -->
             <div class="card card-custom card-city col-md-4" data-city="fernandopolis">
               <div class="card-body card-body-custom">
                 <div class="badges-container">
@@ -595,11 +584,11 @@
                     <i class="bi bi-star-fill rating me-2"></i>
                     <span>5. Excelente (4)</span>
                   </div>
-                  <button class="btn btn-contato">Contato</button>
+                  <button class="btn btn-contato" onclick="agendarConsulta('Cãoveniência Veterinária', 'Fernandópolis', 'Jardim Santa Cecília, Fernandópolis')">Contato</button>
                 </div>
               </div>
             </div>
-            <!---->
+
             <div class="card card-custom card-city col-md-4" data-city="fernandopolis">
               <div class="card-body card-body-custom">
                 <div class="badges-container">
@@ -623,11 +612,11 @@
                     <i class="bi bi-star-fill rating me-2"></i>
                     <span>4,8. Excelente (57)</span>
                   </div>
-                  <button class="btn btn-contato">Contato</button>
+                  <button class="btn btn-contato" onclick="agendarConsulta('PetLand', 'Fernandópolis', 'Coester, Fernandópolis')">Contato</button>
                 </div>
               </div>
             </div>
-            <!---->
+
             <div class="card card-custom card-city col-md-4" data-city="fernandopolis">
               <div class="card-body card-body-custom">
                 <div class="content-wrapper">
@@ -647,11 +636,11 @@
                     <i class="bi bi-star-fill rating me-2"></i>
                     <span>4,5. Excelente (28)</span>
                   </div>
-                  <button class="btn btn-contato">Contato</button>
+                  <button class="btn btn-contato" onclick="agendarConsulta('Bicho Mimado Consutório', 'Fernandópolis', 'Centro, Fernandópolis')">Contato</button>
                 </div>
               </div>
             </div>
-            <!---->
+
             <div class="card card-custom card-city col-md-4" data-city="fernandopolis">
               <div class="card-body card-body-custom">
                 <div class="badges-container">
@@ -674,11 +663,11 @@
                     <i class="bi bi-star-fill rating me-2"></i>
                     <span>4,7. Excelente (42)</span>
                   </div>
-                  <button class="btn btn-contato">Contato</button>
+                  <button class="btn btn-contato" onclick="agendarConsulta('Pet Shop Casa Sabiá', 'Fernandópolis', 'Centro, Fernandópolis')">Contato</button>
                 </div>
               </div>
             </div>
-            <!---->
+
             <div class="card card-custom card-city col-md-4" data-city="fernandopolis">
               <div class="card-body card-body-custom">
                 <div class="badges-container">
@@ -702,11 +691,11 @@
                     <i class="bi bi-star-fill rating me-2"></i>
                     <span>5. Excelente (5)</span>
                   </div>
-                  <button class="btn btn-contato">Contato</button>
+                  <button class="btn btn-contato" onclick="agendarConsulta('Cliníca Veterinária Pró Saúde Especialidades', 'Fernandópolis', 'Coester, Fernandópolis')">Contato</button>
                 </div>
               </div>
             </div>
-            <!---->
+
             <div class="card card-custom card-city col-md-4" data-city="fernandopolis">
               <div class="card-body card-body-custom">
                 <div class="content-wrapper">
@@ -726,11 +715,11 @@
                     <i class="bi bi-star-fill rating me-2"></i>
                     <span>4,6. Excelente (26)</span>
                   </div>
-                  <button class="btn btn-contato">Contato</button>
+                  <button class="btn btn-contato" onclick="agendarConsulta('Cliníca Veterinária Arca de Noé', 'Fernandópolis', 'Coester, Fernandópolis')">Contato</button>
                 </div>
               </div>
             </div>
-            <!---->
+
             <div class="card card-custom card-city col-md-4" data-city="fernandopolis">
               <div class="card-body card-body-custom">
                 <div class="content-wrapper">
@@ -750,11 +739,11 @@
                     <i class="bi bi-star-fill rating me-2"></i>
                     <span>4,5. Excelente (14)</span>
                   </div>
-                  <button class="btn btn-contato">Contato</button>
+                  <button class="btn btn-contato" onclick="agendarConsulta('Espaço Z - Pet Care', 'Fernandópolis', 'Jardim América, Fernandópolis')">Contato</button>
                 </div>
               </div>
             </div>
-            <!---->
+
             <div class="card card-custom card-city col-md-4" data-city="fernandopolis">
               <div class="card-body card-body-custom">
                 <div class="badges-container">
@@ -778,11 +767,11 @@
                     <i class="bi bi-star-fill rating me-2"></i>
                     <span>5. Excelente (4)</span>
                   </div>
-                  <button class="btn btn-contato">Contato</button>
+                  <button class="btn btn-contato" onclick="agendarConsulta('Médico Veterinário Dr. Victor Garcia', 'Fernandópolis', 'Jardim Bela Vista, Fernandópolis')">Contato</button>
                 </div>
               </div>
             </div>
-            <!---->
+
             <div class="card card-custom card-city col-md-4" data-city="fernandopolis">
               <div class="card-body card-body-custom">
                 <div class="content-wrapper">
@@ -802,7 +791,7 @@
                     <i class="bi bi-star-fill rating me-2"></i>
                     <span>4,9. Excelente (7)</span>
                   </div>
-                  <button class="btn btn-contato">Contato</button>
+                  <button class="btn btn-contato" onclick="agendarConsulta('Cliníca Veterinária Late Mia', 'Fernandópolis', 'Residencial Antonia Franco, Fernandópolis')">Contato</button>
                 </div>
               </div>
             </div>
@@ -827,8 +816,6 @@
     </div>
   </footer>
 
-  <!--Cookies-->
-
   <div id="cookieConsent" class="cookie-consent fixed-bottom p-3" role="dialog" aria-live="polite"
     aria-label="Aviso de cookies" aria-hidden="true">
     <div class="card bg-light border-0">
@@ -848,13 +835,21 @@
     </div>
   </div>
 
-  <!---->
-
   <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-auth-compat.js"></script>
   <script src="styles/js/bootstrap.js"></script>
   <script src="styles/js/main.js"></script>
   <script>
+    function agendarConsulta(nomeClinica, cidade, endereco) {
+      const params = new URLSearchParams({
+        clinica: nomeClinica,
+        cidade: cidade,
+        endereco: endereco
+      });
+      
+      window.location.href = `agendar.html?${params.toString()}`;
+    }
+
     document.addEventListener("DOMContentLoaded", function () {
       const selectCity = document.getElementById("city-select");
       const searchInput = document.getElementById("search-input");
